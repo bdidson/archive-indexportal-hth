@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华体会 · 赛事内容与品牌价值</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f3f5f8;
+            color: #1a1e2b;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== hero ===== */
+        .hero {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 3.2rem 2.4rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e6eaf0;
+            margin-bottom: 2.8rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .hero:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 550;
+            letter-spacing: -0.02em;
+            color: #0e121b;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #3e4452;
+            max-width: 780px;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            background: #eef1f5;
+            color: #2b3140;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            border: 1px solid #dce1e8;
+        }
+
+        /* ===== cards ===== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 1.6rem 2rem;
+            border: 1px solid #e1e5ec;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            transition: transform 0.15s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 540;
+            margin-bottom: 0.7rem;
+            color: #11161f;
+        }
+
+        .card p {
+            color: #414856;
+            font-size: 0.98rem;
+        }
+
+        /* ===== section block ===== */
+        .section-block {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.2rem 2rem;
+            border: 1px solid #e3e7ee;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+            margin-bottom: 2.8rem;
+        }
+
+        .section-block h2 {
+            font-size: 1.7rem;
+            font-weight: 530;
+            margin-bottom: 1rem;
+            color: #0e121b;
+        }
+
+        .section-block p {
+            color: #3a4150;
+            margin-bottom: 0.9rem;
+        }
+
+        .section-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== faq summary ===== */
+        .faq-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .faq-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e8ecf2;
+        }
+
+        .faq-list li:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 510;
+            color: #1a1e2b;
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
+        .faq-a {
+            color: #505766;
+            font-size: 0.95rem;
+        }
+
+        /* ===== footer ===== */
+        .footer-links {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 2rem;
+            border: 1px solid #e3e7ee;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+            margin-top: 2rem;
+            text-align: center;
+            color: #4a5162;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a {
+            color: #1f2a44;
+            text-decoration: none;
+            border-bottom: 1px dotted #bcc3d0;
+            font-weight: 450;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .footer-links a:hover {
+            border-bottom: 1px solid #1f2a44;
+            color: #0a0f1c;
+        }
+
+        .footer-links .sep {
+            margin: 0 0.6rem;
+            color: #b7becb;
+        }
+
+        /* ===== responsive ===== */
+        @media (max-width: 640px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1.4rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-block {
+                padding: 1.6rem 1.2rem;
+            }
+
+            .footer-links {
+                padding: 1.4rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero -->
+    <div class="hero">
+        <span class="tagline">赛事内容 · 品牌价值</span>
+        <h1>华体会：从赛场到文化的叙事</h1>
+        <p>体育赛事不只是胜负的集合，更是一种语言——它承载着拼搏、协作与突破的普遍精神。<strong>华体会</strong>正是围绕这一理念，在内容呈现与品牌沟通中不断寻找更清晰的表达方式，帮助关注者理解赛事背后的脉络与厚度。</p>
+        <p>不论是大型联赛还是专项运动，体育内容的可读性、信息密度与视觉节奏，都值得被更认真地对待。这也是华体会持续打磨的方向。</p>
+    </div>
+
+    <!-- 优势 / 特点 cards -->
+    <div class="card-grid">
+        <div class="card">
+            <h3>信息结构优先</h3>
+            <p>赛事内容往往信息庞杂，华体会注重将赛程、数据与背景知识分层组织，让浏览者能快速找到自己关注的线索，减少噪音干扰。</p>
+        </div>
+        <div class="card">
+            <h3>视觉节奏与可读性</h3>
+            <p>页面布局、字体层级、卡片间距……这些细节直接影响阅读体验。华体会在视觉上追求清爽而不寡淡，让内容本身成为焦点。</p>
+        </div>
+        <div class="card">
+            <h3>主题深度延伸</h3>
+            <p>除了即时资讯，华体会也尝试围绕热门赛事或运动文化策划专题内容，提供超越比分的背景与洞察，丰富用户的认知维度。</p>
+        </div>
+    </div>
+
+    <!-- 说明区 / 场景 -->
+    <div class="section-block">
+        <h2>内容价值与场景匹配</h2>
+        <p>不同用户对赛事内容的期待存在差异：有的需要快速浏览赛果与排名，有的希望深入了解战术演变或运动员故事，还有的只是想在闲暇时感受竞技氛围。<strong>华体会</strong>在内容组织上力求兼顾这些场景，通过模块化设计让各类信息各得其所。</p>
+        <p>比如，在关键比赛前后，内容会更加聚焦赛前分析与赛后复盘；而在休赛期，则转向运动文化、历史回顾或人物特写。这种动态调整并不追求面面俱到，而是努力让每一段内容都具备其存在的理由。</p>
+        <p>此外，赛事内容的可信度与中立性同样重要。华体会在信息引用与表述上保持克制，避免情绪化渲染，让事实与观点之间有清晰的界线。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="section-block">
+        <h2>常见问题 · 简要</h2>
+        <ul class="faq-list">
+            <li>
+                <span class="faq-q">华体会主要关注哪些类型的赛事？</span>
+                <span class="faq-a">涵盖足球、篮球、网球等主流项目，同时也会涉及部分新兴运动或综合性赛事，内容选择基于用户兴趣与赛事影响力。</span>
+            </li>
+            <li>
+                <span class="faq-q">内容更新频率如何？</span>
+                <span class="faq-a">根据赛事日历动态更新。重点赛事期间内容密度较高，日常则保持稳定的专题与资讯输出。</span>
+            </li>
+            <li>
+                <span class="faq-q">是否提供深度数据或战术分析？</span>
+                <span class="faq-a">是，但会根据内容定位调整深度。部分文章会包含战术图解或数据可视化，帮助爱好者更直观地理解比赛细节。</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+        了解更多关于体育内容与品牌构建，欢迎访问
+        <a href="https://indexportal-hth.com.cn">华体会</a>
+        <span class="sep">·</span>
+        内容理念 · 赛事观察 · 品牌沟通
+    </div>
+
+</div>
+</body>
+</html>
