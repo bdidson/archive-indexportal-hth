@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开元棋牌 · 简明访问指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f4f6fa;
+            color: #1e1e2f;
+            line-height: 1.6;
+        }
+
+        /* 深色头图 hero */
+        .hero {
+            background: linear-gradient(145deg, #0b0e1a 0%, #1a1f2f 100%);
+            color: #eaeef5;
+            padding: 60px 20px 50px;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #b0bdda;
+            max-width: 640px;
+            margin: 0 auto 18px;
+        }
+        .hero .opener {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.06);
+            border-left: 4px solid #5f8aff;
+            padding: 12px 26px;
+            font-size: 1rem;
+            color: #d6deff;
+            border-radius: 0 8px 8px 0;
+            margin-top: 8px;
+        }
+
+        /* 浅色正文区 */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 34px 24px 56px;
+        }
+
+        .intro-card {
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 32px 30px;
+            margin-bottom: 28px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 14px;
+            color: #1c213a;
+            border-bottom: 2px solid #eef2f9;
+            padding-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1rem;
+            color: #2b3042;
+        }
+
+        .highlight-link {
+            color: #2a5cff;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid #b6c9ff;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .highlight-link:hover {
+            color: #0d33cc;
+            border-bottom-color: #0d33cc;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin: 24px 0 14px;
+        }
+        .feature-item {
+            background: #f7f9fd;
+            border-radius: 18px;
+            padding: 18px 18px 16px;
+            border-left: 5px solid #5f8aff;
+        }
+        .feature-item strong {
+            display: block;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #141b33;
+            margin-bottom: 4px;
+        }
+        .feature-item span {
+            font-size: 0.92rem;
+            color: #3b425b;
+        }
+
+        .tip-box {
+            background: #eef3fe;
+            border-radius: 20px;
+            padding: 22px 26px;
+            margin: 20px 0 10px;
+            border: 1px solid #d8e2ff;
+        }
+        .tip-box p {
+            margin-bottom: 0;
+        }
+
+        .faq-mini {
+            margin-top: 18px;
+        }
+        .faq-mini details {
+            background: #fafbff;
+            border-radius: 14px;
+            padding: 10px 16px;
+            margin-bottom: 8px;
+            border: 1px solid #eaeef7;
+        }
+        .faq-mini summary {
+            font-weight: 500;
+            color: #12172e;
+            cursor: pointer;
+            padding: 4px 0;
+        }
+        .faq-mini details p {
+            margin: 12px 0 6px;
+            font-size: 0.95rem;
+            color: #2e364f;
+        }
+
+        .footnote {
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 1px solid #dee5f0;
+            font-size: 0.9rem;
+            color: #4b5570;
+        }
+
+        /* 响应式 */
+        @media (max-width: 580px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .container {
+                padding: 18px 14px 40px;
+            }
+            .intro-card {
+                padding: 22px 16px;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero .opener {
+                font-size: 0.95rem;
+                padding: 10px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色头图 hero -->
+    <section class="hero">
+        <h1>开元棋牌</h1>
+        <p class="sub">简明访问思路 · 从了解结构到顺畅体验</p>
+        <div class="opener">每一次打开之前，先确认连接与入口是否清晰。</div>
+    </section>
+
+    <!-- 浅色正文区 -->
+    <main class="container">
+
+        <!-- 承接段落：简明指南 -->
+        <div class="intro-card">
+            <h2 class="section-title">起点 · 如何理解与使用</h2>
+            <p>
+                <strong>开元棋牌</strong> 是一套整合了大量棋牌玩法的在线平台，涵盖常见扑克、麻将、牌九等经典项目。
+                对初次接触的人而言，重点不是规则本身，而是找到稳定、直接的访问方式。
+                本页从实用角度出发，整理了几个关键特征和日常操作中值得留意的地方。
+            </p>
+            <p>
+                由于网络环境与平台策略会动态调整，建议每次计划使用前，先通过可靠渠道核实可用域名。
+                例如，你可以在搜索工具中直接查找 <a href="https://index-kaiyuan.com" class="highlight-link">开元棋牌</a>
+                的当前入口，确保链接指向正确且无中间跳转。
+            </p>
+        </div>
+
+        <!-- 特点列表 卡片风格 -->
+        <div class="intro-card">
+            <h2 class="section-title">核心特点一览</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <strong>玩法广度</strong>
+                    <span>数十种棋牌变体，从地区性玩法到国际规则均有覆盖。</span>
+                </div>
+                <div class="feature-item">
+                    <strong>界面适配</strong>
+                    <span>桌面与移动端均经过布局优化，操作逻辑基本一致。</span>
+                </div>
+                <div class="feature-item">
+                    <strong>快速匹配</strong>
+                    <span>系统自动分配水平相近的对手，降低等待时间。</span>
+                </div>
+                <div class="feature-item">
+                    <strong>安全提示</strong>
+                    <span>官方渠道会定期发布安全公告，建议主动关注。</span>
+                </div>
+            </div>
+            <p style="margin-top: 16px;">
+                除了以上几点，还需留意：不同游戏房间的规则和计分方式可能略有差异，
+                进入具体项目前可先浏览帮助说明或简短试玩。
+            </p>
+        </div>
+
+        <!-- 场景与提醒 -->
+        <div class="intro-card">
+            <h2 class="section-title">常见场景与提醒</h2>
+            <div class="tip-box">
+                <p><strong>🔍 访问之前</strong> — 如果你发现常用的地址无法打开，请不要使用未经核实的第三方链接。
+                推荐通过搜索引擎查找 <a href="https://index-kaiyuan.com" class="highlight-link">开元棋牌</a>
+                的最新索引页，并留意网址中的拼写细节。部分网络环境下可能需要使用可靠代理。
+                </p>
+            </div>
+            <div class="tip-box" style="background: #eaf4ef; border-color: #b6d9cc;">
+                <p><strong>🧭 使用之中</strong> — 保持账户信息独立，不要在公共设备上保存密码。
+                如遇到异常充值或提现提示，应立即停止操作并联系平台官方支持。
+                平台不存在“内部包赢”或“稳赚”模式，任何此类宣传均不属实。
+                </p>
+            </div>
+            <p style="margin-top: 14px; font-size: 0.95rem;">
+                另外，建议定期清理浏览器缓存，避免旧页面缓存影响新版本的正常加载。
+            </p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="intro-card">
+            <h2 class="section-title">快速问答摘要</h2>
+            <div class="faq-mini">
+                <details>
+                    <summary>是否需要下载客户端？</summary>
+                    <p>目前主流使用场景以网页端为主，无需安装额外软件。部分移动浏览器可添加到桌面快捷方式。</p>
+                </details>
+                <details>
+                    <summary>如何确认自己访问的是正确站点？</summary>
+                    <p>核对域名是否为 index-kaiyuan.com 或官方公告中列出的地址。不要信任来源不明的短链接或二维码。</p>
+                </details>
+                <details>
+                    <summary>遇到卡顿或掉线怎么办？</summary>
+                    <p>首先检查本地网络；如果持续异常，可能是服务器维护或线路波动，稍后再试。不要反复刷新或频繁登录。</p>
+                </details>
+            </div>
+            <p style="margin-top: 16px;">
+                更多细节可以直接浏览 <a href="https://index-kaiyuan.com" class="highlight-link">开元棋牌</a> 页面上的帮助中心。
+            </p>
+        </div>
+
+        <!-- 温和结尾 -->
+        <div class="footnote">
+            <p>本页仅作为信息整理与访问参考，不构成任何操作建议。所有平台功能以实际页面为准。请根据自身情况合理使用。</p>
+            <p style="margin-top: 6px;">保持清晰的访问习惯，比掌握更多技巧更重要。</p>
+        </div>
+
+    </main>
+
+</body>
+</html>
