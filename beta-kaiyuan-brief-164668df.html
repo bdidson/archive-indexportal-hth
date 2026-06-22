@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>专题 · 棋牌文化新读本</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f2f4f6;
+      font-family: "Georgia", "Noto Serif SC", "Times New Roman", serif;
+      color: #2c2e33;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    /* hero 区域 — 杂志横幅 */
+    .hero {
+      background: #e8ecef;
+      padding: 4rem 2.5rem 3.2rem;
+      border-radius: 32px 32px 20px 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+      border: 1px solid #dde1e5;
+      margin-bottom: 2.8rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: #c7cfd8;
+      color: #1e2228;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      text-transform: uppercase;
+      border: 1px solid #b1b9c2;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #1a1d23;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
+      color: #4f575f;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #3b4047;
+      max-width: 680px;
+      margin: 0.8rem auto 0;
+      border-top: 1px solid #cad0d7;
+      padding-top: 1.2rem;
+    }
+
+    /* 卡片网格 */
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+    }
+
+    .card {
+      background: #fffffffa;
+      border-radius: 24px;
+      padding: 2.2rem 2.5rem;
+      border: 1px solid #dde2e8;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04), 0 4px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    .card h2 {
+      font-size: 1.7rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      border-left: 4px solid #9aa6b2;
+      padding-left: 1.1rem;
+      margin-bottom: 1.2rem;
+      color: #1e2229;
+    }
+
+    .card h2 small {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: #6b7580;
+      margin-left: 0.75rem;
+    }
+
+    .card p {
+      margin-bottom: 1rem;
+      color: #353b43;
+      font-size: 1rem;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .inset-quote {
+      background: #f0f3f6;
+      border-radius: 18px;
+      padding: 1.4rem 2rem;
+      margin: 1.6rem 0 0.8rem;
+      border: 1px solid #d5dce3;
+      font-style: italic;
+      color: #3d444d;
+    }
+
+    .inset-quote strong {
+      font-style: normal;
+      font-weight: 500;
+      color: #1f252d;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      margin: 1.2rem 0 0.4rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      flex: 1 1 180px;
+      background: #f4f7fa;
+      padding: 0.5rem 1rem 0.5rem 1.8rem;
+      border-radius: 40px;
+      border: 1px solid #d9dfe6;
+      position: relative;
+      font-size: 0.95rem;
+      color: #2f363f;
+    }
+
+    .feature-list li::before {
+      content: "◇";
+      position: absolute;
+      left: 12px;
+      top: 0.45rem;
+      color: #76828f;
+      font-size: 0.9rem;
+    }
+
+    .faq-mini {
+      background: #f6f8fa;
+      border-radius: 20px;
+      padding: 1.6rem 2rem;
+      margin: 1.8rem 0 0.8rem;
+      border: 1px solid #dee4eb;
+    }
+
+    .faq-mini details {
+      margin-bottom: 1rem;
+    }
+
+    .faq-mini details:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-mini summary {
+      font-weight: 500;
+      cursor: pointer;
+      color: #2d343e;
+      padding: 0.3rem 0;
+      font-size: 1rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-mini summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-mini summary::before {
+      content: "▹";
+      margin-right: 10px;
+      color: #5d6b7a;
+      font-size: 1.1rem;
+    }
+
+    .faq-mini details[open] summary::before {
+      content: "▿";
+    }
+
+    .faq-mini .answer {
+      padding: 0.6rem 0 0.2rem 1.8rem;
+      color: #3f4853;
+      font-size: 0.95rem;
+    }
+
+    /* 页尾 */
+    .footer-note {
+      margin-top: 3rem;
+      padding: 1.8rem 2rem 1.6rem;
+      background: #e4e9ef;
+      border-radius: 40px 40px 20px 20px;
+      border: 1px solid #cdd5dd;
+      text-align: center;
+      font-size: 0.98rem;
+      color: #2b313a;
+    }
+
+    .footer-note a {
+      color: #20262e;
+      text-decoration: none;
+      border-bottom: 2px solid #9aa6b5;
+      padding-bottom: 2px;
+      font-weight: 500;
+      transition: border-color 0.2s;
+    }
+
+    .footer-note a:hover {
+      border-bottom-color: #414e5e;
+    }
+
+    /* 响应式 */
+    @media (max-width: 680px) {
+      body {
+        padding: 1.4rem 1rem;
+      }
+
+      .hero {
+        padding: 3rem 1.5rem 2.4rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .card {
+        padding: 1.8rem 1.4rem;
+      }
+
+      .card h2 {
+        font-size: 1.4rem;
+        padding-left: 0.8rem;
+      }
+
+      .feature-list li {
+        flex: 1 1 100%;
+      }
+
+      .faq-mini {
+        padding: 1.2rem 1.2rem;
+      }
+
+      .footer-note {
+        padding: 1.4rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero .badge {
+        font-size: 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- hero / 杂志横幅 -->
+    <div class="hero">
+      <span class="badge">· 专题 · 棋牌文化 ·</span>
+      <h1>牌局 · 对弈 · 时代<br><em>另一种智趣生活</em></h1>
+      <p>从街巷棋摊到线上牌桌，棋牌始终是一种温和的智力社交。不喧哗，不浮躁，只是安安静静地，在一局又一局里看见风格与分寸。</p>
+    </div>
+
+    <!-- 三段自然介绍 + 卡片 -->
+    <div class="cards">
+
+      <!-- 第一段：背景说明 -->
+      <div class="card">
+        <h2>01 · 棋牌不只是游戏 <small>背景</small></h2>
+        <p>棋牌文化跨越地域与年龄，它是闲暇时的从容，也是思考的乐趣。无论是一杯茶一盘棋，还是三五好友线上切磋，都离不开一种轻松而专注的氛围。在信息过载的今天，越来越多的人重新回到棋牌的世界——不为胜负，只为那份不急不慢的节奏。</p>
+        <p>这种文化背后，是设计与规则的沉淀：从麻将的番种计算到扑克的概率推演，从围棋的厚势到象棋的弃子，每种玩法都藏着独特的思维美学。棋牌不是简单的运气游戏，它更像一种温和的脑力体操，让人在娱乐中保持敏锐。</p>
+        <div class="inset-quote">
+          <strong>「棋牌是一种温和的对抗」</strong> —— 不针对人，只针对牌面与局势。输了可以再来，赢了也只是一笑。这种宽容，恰恰是它长盛不衰的密码。
+        </div>
+      </div>
+
+      <!-- 第二段：特点与场景融合 -->
+      <div class="card">
+        <h2>02 · 从线上到线下，同一份从容 <small>特点·场景</small></h2>
+        <p>无论是忙碌间隙的快速对局，还是周末午后的悠闲牌局，棋牌的适应性极强。线上平台让天南海北的棋友可以随时凑一桌，而线下棋牌室则保留了面对面的温度与谈笑。不必拘泥于形式——重要的是那份沉浸其中的专注感。</p>
+        <ul class="feature-list">
+          <li>规则清晰，上手不难</li>
+          <li>节奏自控，可快可慢</li>
+          <li>社交属性强，破冰利器</li>
+          <li>锻炼逻辑与决策力</li>
+        </ul>
+        <p>在都市的快节奏里，能有一段完整的时间留给牌局，几乎成了一种奢侈的休息。棋牌不会给你压力，它只是安静地陪伴，让你在出牌、碰牌、吃牌或落子的瞬间，暂时忘掉琐事。</p>
+      </div>
+
+      <!-- 第三段：FAQ 摘要 + 自然引导 -->
+      <div class="card">
+        <h2>03 · 一些常见的好奇 <small>FAQ 摘要</small></h2>
+        <div class="faq-mini">
+          <details>
+            <summary>棋牌类游戏需要很强的记忆力吗？</summary>
+            <div class="answer">记牌和记谱是进阶技巧，但初学阶段完全不需要。大部分棋牌的基础乐趣在于当下的判断，记忆可以慢慢积累，不是门槛。</div>
+          </details>
+          <details>
+            <summary>线上棋牌和线下体验差别大吗？</summary>
+            <div class="answer">形式不同，本质相似。线上更快捷，适合碎片时间；线下更有仪式感，适合聚会。很多人两者都喜欢，并不冲突。</div>
+          </details>
+          <details>
+            <summary>棋牌适合完全零基础的人吗？</summary>
+            <div class="answer">当然。很多玩法五分钟就能明白规则，剩下的就是在对局中慢慢熟悉。没有人一开始就是高手，每一局都是练习。</div>
+          </details>
+        </div>
+        <p style="margin-top: 1.2rem;">如果你对棋牌文化产生了一点兴趣，不妨从一个简单的玩法开始。你喜欢哪种风格，都可以在 <a href="https://beta-kaiyuan.com">开元棋牌</a> 找到适合自己的节奏。这里没有喧闹的推销，只有一局接一局的安静陪伴。</p>
+      </div>
+
+    </div>
+
+    <!-- 页尾访问提示 (温和告知) -->
+    <div class="footer-note">
+      ◇ 棋牌是一种生活方式，不急不躁，不争不抢。<br>
+      了解更多，请移步 <a href="https://beta-kaiyuan.com">开元棋牌</a> · 愿你在牌局中找到属于自己的节奏。
+    </div>
+
+  </div>
+</body>
+</html>
